@@ -1,0 +1,433 @@
+# ============================================================
+# 弱口令检测工具 — 远程靶场 Docker Compose
+# 目标服务器: <YOUR_SERVER_IP> (Ubuntu 22.04 / 16GB RAM)
+# 覆盖资产: 数据库+中间件+CI/CD+监控 共 22 个真实服务
+# 所有服务均使用资产表 recorded 弱口令
+# ============================================================
+
+version: "3.9"
+
+# ============================================================
+# 网络定义
+# ============================================================
+networks:
+  weakpass-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.30.0.0/16
+
+# ============================================================
+# 服务定义
+# ============================================================
+services:
+
+  # ==================== 数据库层 ====================
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-weakpass
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: testdb
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - weakpass-net
+    mem_limit: 512m
+    command: --default-authentication-plugin=mysql_native_password
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  postgresql:
+    image: postgres:16-alpine
+    container_name: postgresql-weakpass
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: testdb
+    ports:
+      - "5432:5432"
+    networks:
+      - weakpass-net
+    mem_limit: 256m
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  redis:
+    image: redis:7-alpine
+    container_name: redis-weakpass
+    restart: unless-stopped
+    command: redis-server --requirepass redis
+    ports:
+      - "6379:6379"
+    networks:
+      - weakpass-net
+    mem_limit: 128m
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "redis", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  redis-unauth:
+    image: redis:7-alpine
+    container_name: redis-unauth
+    restart: unless-stopped
+    command: redis-server --port 6380
+    ports:
+      - "6380:6380"
+    networks:
+      - weakpass-net
+    mem_limit: 128m
+    # 无密码 — 模拟未授权访问
+
+  mongodb:
+    image: mongo:7
+    container_name: mongodb-weakpass
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    ports:
+      - "27017:27017"
+    networks:
+      - weakpass-net
+    mem_limit: 512m
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.15.0
+    container_name: elasticsearch-weakpass
+    restart: unless-stopped
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=true
+      - ELASTIC_PASSWORD=changeme
+      - xpack.security.http.ssl.enabled=false
+      - xpack.security.transport.ssl.enabled=false
+      - ES_JAVA_OPTS=-Xms256m -Xmx256m
+    ports:
+      - "9200:9200"
+    networks:
+      - weakpass-net
+    mem_limit: 768m
+    healthcheck:
+      test: ["CMD-SHELL", "curl -s -u elastic:changeme http://localhost:9200/_cluster/health | grep -vq error"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+
+  influxdb:
+    image: influxdb:1.8
+    container_name: influxdb-weakpass
+    restart: unless-stopped
+    environment:
+      INFLUXDB_ADMIN_USER: admin
+      INFLUXDB_ADMIN_PASSWORD: admin
+      INFLUXDB_HTTP_AUTH_ENABLED: "true"
+    ports:
+      - "8086:8086"
+    networks:
+      - weakpass-net
+    mem_limit: 256m
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:8086/ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    container_name: clickhouse-weakpass
+    restart: unless-stopped
+    environment:
+      CLICKHOUSE_USER: default
+      CLICKHOUSE_PASSWORD: ""
+      CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT: "0"
+    ports:
+      - "8123:8123"
+      - "9004:9000"
+    networks:
+      - weakpass-net
+    mem_limit: 512m
+    ulimits:
+      nofile: 262144
+
+  couchdb:
+    image: couchdb:3
+    container_name: couchdb-weakpass
+    restart: unless-stopped
+    environment:
+      COUCHDB_USER: admin
+      COUCHDB_PASSWORD: admin
+    ports:
+      - "5984:5984"
+    networks:
+      - weakpass-net
+    mem_limit: 256m
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://admin:admin@localhost:5984/_up"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  neo4j:
+    image: neo4j:5
+    container_name: neo4j-weakpass
+    restart: unless-stopped
+    environment:
+      NEO4J_AUTH: neo4j/neo4j
+      NEO4J_PLUGINS: '["apoc"]'
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    networks:
+      - weakpass-net
+    mem_limit: 768m
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "-u", "neo4j:neo4j", "http://localhost:7474"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+
+  # ==================== 消息队列/搜索 ====================
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq-weakpass
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - weakpass-net
+    mem_limit: 256m
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  activemq:
+    image: vromero/activemq-artemis:latest-alpine
+    container_name: activemq-weakpass
+    restart: unless-stopped
+    environment:
+      ARTEMIS_USERNAME: admin
+      ARTEMIS_PASSWORD: admin
+      ARTEMIS_MIN_MEMORY: 128M
+      ARTEMIS_MAX_MEMORY: 256M
+    ports:
+      - "61616:61616"
+      - "8161:8161"
+    networks:
+      - weakpass-net
+    mem_limit: 512m
+
+  # ==================== 中间件 ====================
+
+  tomcat:
+    image: tomcat:9-jdk17
+    container_name: tomcat-weakpass
+    restart: unless-stopped
+    environment:
+      CATALINA_OPTS: -Xmx256m
+    ports:
+      - "8081:8080"
+    networks:
+      - weakpass-net
+    mem_limit: 512m
+    volumes:
+      - ./tomcat-conf/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml:ro
+
+  wildfly:
+    image: quay.io/wildfly/wildfly:latest
+    container_name: wildfly-weakpass
+    restart: unless-stopped
+    environment:
+      WILDFLY_USER: admin
+      WILDFLY_PASS: admin
+    ports:
+      - "9990:9990"
+      - "8082:8080"
+    networks:
+      - weakpass-net
+    mem_limit: 512m
+
+  # ==================== CI/CD ====================
+
+  jenkins:
+    image: jenkins/jenkins:lts-jdk17
+    container_name: jenkins-weakpass
+    restart: unless-stopped
+    environment:
+      JAVA_OPTS: -Djenkins.install.runSetupWizard=false -Xmx512m
+    ports:
+      - "8080:8080"
+    networks:
+      - weakpass-net
+    mem_limit: 1024m
+    volumes:
+      - jenkins-data:/var/jenkins_home
+      - ./jenkins-init:/usr/share/jenkins/ref/init.groovy.d:ro
+    # init.groovy.d 脚本自动创建 admin/admin 用户
+
+  sonarqube:
+    image: sonarqube:community
+    container_name: sonarqube-weakpass
+    restart: unless-stopped
+    environment:
+      SONAR_ES_BOOTSTRAP_CHECKS_DISABLE: "true"
+      SONAR_SEARCH_JAVAOPTS: -Xmx256m
+    ports:
+      - "9000:9000"
+    networks:
+      - weakpass-net
+    mem_limit: 1024m
+    # 默认 admin/admin
+
+  nexus:
+    image: sonatype/nexus3:latest
+    container_name: nexus-weakpass
+    restart: unless-stopped
+    ports:
+      - "8084:8081"
+    networks:
+      - weakpass-net
+    mem_limit: 1024m
+    volumes:
+      - nexus-data:/nexus-data
+    # 默认 admin/admin123 (首次启动随机生成，通过 volumes 持久化后可控)
+
+  gitea:
+    image: gitea/gitea:latest
+    container_name: gitea-weakpass
+    restart: unless-stopped
+    environment:
+      GITEA__database__DB_TYPE: sqlite3
+    ports:
+      - "3001:3000"
+      - "2222:22"
+    networks:
+      - weakpass-net
+    mem_limit: 384m
+
+  # ==================== 监控/运维 ====================
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana-weakpass
+    restart: unless-stopped
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_AUTH_BASIC_ENABLED: "true"
+    ports:
+      - "3000:3000"
+    networks:
+      - weakpass-net
+    mem_limit: 256m
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.15.0
+    container_name: kibana-weakpass
+    restart: unless-stopped
+    environment:
+      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+      ELASTICSEARCH_USERNAME: elastic
+      ELASTICSEARCH_PASSWORD: changeme
+    ports:
+      - "5601:5601"
+    networks:
+      - weakpass-net
+    mem_limit: 512m
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:5601/api/status"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer-weakpass
+    restart: unless-stopped
+    command: --admin-password '$$2y$$05$$9YKiGQIG5mDnapYM8A3jaeYHD5NRFVxGGcr1FJFLKiLNFI0EVhOiy'
+    # ↑ bcrypt hash for 'admin123'
+    ports:
+      - "9443:9443"
+      - "9001:9000"
+    networks:
+      - weakpass-net
+    mem_limit: 256m
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  # ==================== 其他数据库/搜索 ====================
+
+  zookeeper:
+    image: zookeeper:latest
+    container_name: zookeeper-weakpass
+    restart: unless-stopped
+    environment:
+      ZOO_4LW_COMMANDS_WHITELIST: "*"
+    ports:
+      - "2181:2181"
+    networks:
+      - weakpass-net
+    mem_limit: 384m
+    # 默认无认证 — 对应资产表 admin/admin HTTP 管理接口
+
+  # ==================== 可选重服务 (默认不启动) ====================
+  # 使用: docker compose --profile heavy up -d
+
+  gitlab:
+    image: gitlab/gitlab-ce:latest
+    container_name: gitlab-weakpass
+    restart: unless-stopped
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://<YOUR_SERVER_IP>:8083'
+    ports:
+      - "8083:80"
+      - "8443:443"
+      - "2224:22"
+    networks:
+      - weakpass-net
+    mem_limit: 4096m
+    volumes:
+      - gitlab-config:/etc/gitlab
+      - gitlab-logs:/var/log/gitlab
+      - gitlab-data:/var/opt/gitlab
+    profiles:
+      - heavy
+
+# ============================================================
+# 持久化卷
+# ============================================================
+volumes:
+  jenkins-data:
+  nexus-data:
+  gitlab-config:
+  gitlab-logs:
+  gitlab-data:

@@ -1,0 +1,1418 @@
+###############################################################################
+#  弱口令验证密钥库 — 全量版
+#  Weak Password Dictionary — Comprehensive Edition
+#  生成日期: 2026-05-25
+#  用途: 安全审计 / 弱口令排查 / 合规检查 / 渗透测试(授权)
+#
+#  覆盖范围:
+#    网络设备 (H3C/华为/思科/锐捷/中兴/Juniper/Aruba/TP-Link...)
+#    安全设备 (深信服/山石/天融信/迪普/启明/绿盟/Fortinet/PaloAlto...)
+#    摄像头/NVR (海康/大华/宇视/Axis/Bosch/三星/松下...)
+#    打印机 (HP/Canon/Ricoh/KonicaMinolta/Brother/Xerox...)
+#    数据库 (MySQL/Oracle/SQLServer/PostgreSQL/MongoDB/Redis...)
+#    中间件 (Tomcat/WebLogic/WebSphere/JBoss/GlassFish/Resin...)
+#    应用系统 (WordPress/Joomla/Drupal/Jenkins/GitLab/Grafana...)
+#    消息队列 (RabbitMQ/ActiveMQ/Kafka...)
+#    运维工具 (Zabbix/Nagios/Splunk/Ansible...)
+#    工控设备 (Siemens/Schneider/Rockwell...)
+#
+#  格式: 每行一个 用户:密码 组合
+###############################################################################
+
+# ===========================================================================
+# 第一大类：网络设备 (Network Devices)
+# ===========================================================================
+
+# ---- H3C (新华三) ----
+admin:admin
+admin:admin@123
+admin:admin123
+admin:h3c
+admin:H3C
+admin:h3c123
+admin:adminer
+admin:adminer3100
+admin:adminer3200
+admin:adminer3260
+admin:adminer5100
+admin:adminer5200
+admin:password
+admin:123456
+admin:h3capadmin
+test:123
+guest:guest
+guest:guest123
+manager:manager
+operator:operator
+
+# ---- H3C 新增 (cirt.net/官方KB) ----
+h3c:h3c
+h3c:h3c20101108
+h3c:h3c@123
+h3c:H3C@123
+admin:adminh3c
+admin:Pwd@12345
+secCsap:secCsap@12345
+sys:sys
+admin:h3c@admin
+admin:admin@h3c.com
+admin:admin@12345
+admin:h3c123456
+admin:Cloud@1234
+
+# ---- 华为 (Huawei) ----
+admin:admin@huawei.com
+admin:Admin@123
+admin:Admin@1234
+admin:Huawei@123
+admin:huawei@123
+admin:huawei123
+admin:admin123
+admin:admin@123
+admin:Changeme123
+root:admin
+root:admin@huawei.com
+root:Huawei@123
+root:Changeme123
+
+# ---- 华为 新增 (cirt.net/官方KB) ----
+admin:Huawei12#$
+audit-admin:Admin@123
+audit-admin:admin@123
+telnetuser:telnetpwd
+ftpuser:ftppwd
+root:mduadmin
+huawei:huawei20101108
+admin:Huawei@1234
+admin:admin@1234
+admin:Changeme_123
+root:Huawei12#$
+admin:huawei@1234
+
+# ---- 思科 (Cisco) ----
+cisco:cisco
+admin:cisco
+admin:admin
+cisco:admin
+root:cisco
+admin:cisco123
+admin:Cisco@123
+enable:cisco
+admin:c1sc0
+admin:C1sc0@123
+
+# ---- 思科 新增 (cirt.net) ----
+cisco:cisco20101108
+enable:enable
+admin:cisco123
+admin:c1sc0@123
+admin:C1sc0@12345
+root:cisco123
+cisco:cisco123
+
+# ---- 锐捷 (Ruijie) ----
+admin:admin
+admin:ruijie
+admin:ruijie123
+admin:rg@123
+admin:Ruijie@123
+admin:123456
+admin:admin123
+
+# ---- 锐捷 新增 ----
+admin:111111111
+admin:super
+super:super
+ruijie:ruijie20101108
+admin:abc12345
+admin:ruijie@123
+
+# ---- 中兴 (ZTE) ----
+admin:admin
+admin:zte
+admin:zte123
+admin:ZTE@123
+admin:zte@123
+zte:zte20101108
+
+# ---- Juniper ----
+root:juniper
+admin:juniper123
+admin:admin123
+root:admin
+root:Juniper@1
+super:super
+
+# ---- Juniper 新增 ----
+root:juniper123
+admin:juniper@123
+super:juniper
+
+# ---- Aruba ----
+admin:admin
+admin:admin123
+admin:aruba123
+admin:Aruba@123
+
+# ---- TP-Link ----
+admin:admin
+admin:admin123
+admin:tp-link
+
+# ---- D-Link ----
+admin:admin
+admin:password
+admin:123456
+
+# ---- Netgear ----
+admin:password
+admin:admin
+admin:1234
+
+# ---- MikroTik ----
+admin:(空)
+admin:admin
+
+# ---- F5 BIG-IP ----
+root:default
+admin:admin
+
+# ---- 锐讯/迈普/烽火 ----
+admin:admin
+admin:admin123
+admin:maipu
+admin:fiberhome
+admin:fiberhome123
+
+# ===========================================================================
+# 第二大类：安全设备 (Security Appliances)
+# ===========================================================================
+
+# ---- 深信服 (Sangfor) ----
+admin:admin
+admin:sangfor
+admin:sangfor123
+admin:Sangfor@123
+admin:sangfor@123
+admin:Sangfor@2024
+admin:Sangfor@2025
+
+# ---- 山石 (Hillstone) ----
+hillstone:hillstone
+admin:hillstone
+admin:Hillstone@123
+admin:admin
+
+# ---- 天融信 (TopSec) ----
+superman:talent
+superman:talent123
+admin:talent
+admin:admin
+
+# ---- 迪普 (DPtech) ----
+admin:admin
+admin:dptechnet
+admin:dptech
+admin:DPtech@123
+
+# ---- 启明星辰 (Venustech) ----
+admin:admin
+admin:venus
+admin:venus123
+admin:venus@123
+admin:Venus@123
+
+# ---- 绿盟 (NSFOCUS) ----
+admin:admin
+admin:nsfocus
+admin:nsfocus123
+admin:NSFOCUS@123
+admin:nsfocus@123
+
+# ---- Fortinet (飞塔) ----
+admin:(空)
+admin:admin
+admin:fortinet
+admin:Fortinet123
+
+# ---- Palo Alto ----
+admin:admin
+admin:paloalto
+
+# ---- 奇安信/360 ----
+admin:admin
+admin:qianxin
+admin:qianxin123
+admin:360@admin
+
+# ---- 安全设备 新增 ----
+admin:admin@venus
+admin:Venus@12345
+superman:talent!@#
+admin:dptech@123
+admin:hillstone@123
+admin:奇安信@123
+admin:qianxin@12345
+admin:360admin
+admin:admin@nsfocus
+
+# ===========================================================================
+# 第三大类：摄像头 / NVR / DVR (Surveillance)
+# ===========================================================================
+
+# ---- 海康威视 (Hikvision) ----
+admin:12345
+admin:admin12345
+admin:admin@12345
+admin:hik12345
+admin:abc12345
+admin:Hikvision@123
+admin:Hik@#123
+root:admin
+
+# ---- 大华 (Dahua) ----
+admin:admin
+admin:admin123
+admin:admin888
+888888:888888
+666666:666666
+default:default
+admin:Dahua@123
+root:vizxv
+
+# ---- 宇视 (Uniview) ----
+admin:123456
+admin:admin123
+admin:Uniview@123
+admin:unv123456
+
+# ---- Axis ----
+root:pass
+root:admin
+admin:admin
+root:root
+
+# ---- Bosch ----
+service:service
+admin:admin
+user:user
+
+# ---- Samsung / Hanwha ----
+admin:1111111
+admin:4321
+admin:admin
+admin:123456
+admin:sec00000
+
+# ---- Panasonic ----
+admin:12345
+admin:admin
+admin:panasonic
+
+# ---- Sony ----
+admin:admin
+admin:sony
+
+# ---- Honeywell ----
+admin:1234
+admin:admin
+
+# ---- Pelco ----
+admin:admin
+admin:pelco
+
+# ---- Vivotek ----
+root:(空)
+root:pass
+admin:admin
+
+# ---- Foscam ----
+admin:(空)
+admin:admin
+
+# ---- Ubiquiti UniFi ----
+ubnt:ubnt
+admin:admin
+root:ubnt
+
+# ---- TVT ----
+admin:123456
+admin:admin
+
+# ---- Grandstream ----
+admin:admin
+admin:123456
+
+# ---- CP Plus ----
+admin:admin123
+admin:admin
+
+# ---- ZKTeco ----
+admin:admin
+admin:123456
+admin:admin123
+
+# ---- 汉邦高科 (Hanbang Gaoke) ----
+admin:888888
+admin:admin
+666666:666666
+default:default
+admin:123456
+
+# ---- 天地伟业 (Tiandy) ----
+admin:111111
+admin:admin
+admin:123456
+admin:(空)
+
+# ---- 雄迈 / 巨峰 (XiongMai / Jufeng) ----
+admin:(空)
+admin:admin
+admin:123456
+admin:xm123
+
+# ---- 中维世纪 / 尚维 (Jovision) ----
+abc:(空)
+admin:123
+admin:admin
+admin:(空)
+
+# ---- 天视通 (Topsee / TPSEE) ----
+admin:123456
+admin:admin
+super:super
+
+# ---- Canon (佳能) ----
+root:camera
+admin:admin
+admin:canon
+
+# ---- Mobotix ----
+admin:meinsm
+admin:admin
+
+# ---- ACTi ----
+Admin:123456
+admin:123456
+admin:admin
+
+# ---- GeoVision ----
+admin:admin
+admin:123456
+guest:guest
+
+# ---- FLIR ----
+admin:fliradmin
+admin:000000
+admin:Flir12345678
+
+# ---- JVC ----
+admin:jvc
+admin:admin
+
+# ---- IQinVision ----
+root:system
+
+# ---- VideoIQ ----
+supervisor:supervisor
+
+# ---- Speco ----
+admin:1111
+admin:1234
+admin:123456
+
+# ---- Arecont Vision ----
+admin:(空)
+admin:AVCostar
+
+# ---- Avigilon (Motorola) ----
+admin:admin
+administrator:(空)
+admin:avigilon
+
+# ---- IDIS ----
+admin:(空)
+admin:admin
+admin:111111
+
+# ---- CNB ----
+admin:admin
+admin:1111
+user:1111
+
+# ---- Avtech ----
+admin:admin
+admin:0000
+
+# ---- Everfocus ----
+admin:1111
+admin:admin
+
+# ---- IndigoVision ----
+Admin:1234
+admin:admin
+
+# ---- Lilin ----
+admin:pass
+admin:admin
+
+# ---- Marshall ----
+admin:admin
+
+# ---- 其它摄像头 ----
+admin:1234
+admin:888888
+admin:666666
+admin:111111
+admin:000000
+admin:admin@123
+admin:admin888
+admin:supervisor
+supervisor:supervisor
+root:system
+root:camera
+
+# ===========================================================================
+# 第四大类：打印机 / 复印机 (Printers)
+# ===========================================================================
+
+# ---- HP ----
+admin:admin
+admin:12345678
+admin:admin123
+admin:HP123456
+admin:123456
+
+# ---- Canon ----
+admin:admin
+ADMIN:canon
+admin:canon123
+root:canon
+
+# ---- Ricoh ----
+admin:admin
+admin:password
+supervisor:admin
+admin:(空)
+
+# ---- Konica Minolta ----
+admin:admin
+admin:12345678
+admin:1234567812345678
+
+# ---- Brother ----
+admin:access
+admin:admin
+admin:12345678
+
+# ---- Xerox ----
+admin:1111
+admin:admin
+admin:xerox
+admin:11111
+
+# ---- Sharp ----
+admin:admin
+admin:Sharp
+
+# ---- Epson ----
+admin:admin
+admin:epson
+
+# ---- Lexmark ----
+admin:admin
+admin:lexmark
+
+# ---- Kyocera ----
+admin:admin
+admin:admin00
+
+# ---- OKI ----
+admin:admin
+admin:999999
+
+# ---- Toshiba ----
+admin:Toshiba
+admin:123456
+root:ikwd
+
+# ===========================================================================
+# 第五大类：数据库 (Databases)
+# ===========================================================================
+
+# ---- MySQL / MariaDB ----
+root:(空)
+root:root
+root:mysql
+root:admin
+root:password
+root:123456
+root:root123
+root:toor
+
+# ---- Oracle ----
+SYS:change_on_install
+SYSTEM:manager
+SCOTT:tiger
+DBSNMP:dbsnmp
+OUTLN:outln
+CTXSYS:ctxsys
+MDSYS:mdsys
+ORDSYS:ordsys
+XDB:change_on_install
+WMSYS:wmsys
+EXFSYS:exfsys
+
+# ---- Microsoft SQL Server ----
+sa:(空)
+sa:sa
+sa:password
+sa:admin
+sa:123456
+sa:P@ssw0rd
+sa:sqlserver
+sa:SA@123
+
+# ---- PostgreSQL ----
+postgres:(空)
+postgres:postgres
+postgres:admin
+postgres:password
+postgres:postgres123
+postgres:123456
+
+# ---- MongoDB ----
+admin:(空)
+admin:admin
+admin:password
+admin:mongodb
+admin:mongodb123
+root:root
+
+# ---- CouchDB ----
+admin:couchdb
+
+# ---- Neo4j ----
+neo4j:neo4j
+
+# ---- Redis ----
+(空):(空)
+root:root
+admin:admin
+default:default
+redis:redis
+
+# ---- DB2 ----
+db2inst1:db2inst1
+db2admin:db2admin
+db2fenc1:db2fenc1
+dasusr1:dasusr1
+db2admin:db2inst1
+db2inst1:db2admin
+
+# ---- Sybase ----
+sa:(空)
+sa:sa
+sa:sapassword
+
+# ---- Informix ----
+informix:informix
+root:informix
+
+# ---- Elasticsearch ----
+elastic:changeme
+elastic:elastic
+elastic:password
+
+# ===========================================================================
+# 第六大类：Java 中间件 / 应用服务器 (Middleware)
+# ===========================================================================
+
+# ---- Apache Tomcat ----
+admin:admin
+tomcat:tomcat
+admin:tomcat
+tomcat:admin
+admin:(空)
+tomcat:(空)
+both:tomcat
+role1:role1
+manager:manager
+admin:password
+tomcat:s3cret
+
+# ---- Oracle WebLogic ----
+weblogic:welcome1
+weblogic:weblogic
+weblogic:weblogic1
+weblogic:Oracle@123
+weblogic:admin123
+system:password
+admin:admin
+
+# ---- IBM WebSphere ----
+admin:admin
+system:manager
+wsadmin:wsadmin
+wasadmin:wasadmin
+
+# ---- JBoss / WildFly ----
+admin:admin
+admin:jboss
+admin:admin123
+admin:jboss@123
+admin:Admin@123
+
+# ---- GlassFish ----
+admin:adminadmin
+admin:admin
+admin:glassfish
+admin:admin123
+
+# ---- Resin ----
+admin:admin
+admin:resin
+
+# ---- Jetty ----
+admin:admin
+admin:jetty
+
+# ---- WebLogic 域账户 ----
+system:Passw0rd
+operator:operator
+monitor:monitor
+
+# ---- 中间件/Web 新增 ----
+weblogic:weblogic123
+weblogic:Oracle@1234
+wasadmin:wasadmin
+wsadmin:wsadmin
+system:manager
+tomcat:s3cret
+tomcat:password
+role1:role1
+both:tomcat
+jboss:jboss
+admin:jboss@12345
+
+# ===========================================================================
+# 第七大类：消息队列 / 大数据 (Message Queue / Big Data)
+# ===========================================================================
+
+# ---- RabbitMQ ----
+guest:guest
+admin:admin
+rabbitmq:rabbitmq
+
+# ---- ActiveMQ ----
+admin:admin
+user:user
+system:manager
+
+# ---- Apache Kafka ----
+admin:admin
+admin:admin-secret
+admin:kafka
+
+# ---- Elasticsearch ----
+elastic:changeme
+elastic:elastic
+elastic:password
+
+# ---- Kibana ----
+elastic:changeme
+kibana:kibana
+admin:admin
+
+# ---- EMQX ----
+admin:public
+
+# ---- Logstash ----
+logstash:logstash
+admin:admin
+
+# ---- Grafana ----
+admin:admin
+admin:grafana
+admin:password
+
+# ---- Hadoop / HDFS ----
+hdfs:hdfs
+mapred:mapred
+yarn:yarn
+admin:admin
+
+# ---- Zookeeper ----
+admin:admin
+super:super
+
+# ---- Nagios ----
+nagiosadmin:nagiosadmin
+nagiosadmin:admin
+nagiosadmin:nagios
+
+# ---- Zabbix ----
+Admin:zabbix
+admin:zabbix
+Admin:admin
+admin:admin
+
+# ---- Centreon ----
+admin:centreon
+
+# ---- Splunk ----
+admin:changeme
+admin:admin
+admin:splunk
+
+# ===========================================================================
+# 第八大类：CMS / Web 应用 (Content Management)
+# ===========================================================================
+
+# ---- WordPress ---
+admin:admin
+admin:password
+admin:123456
+admin:wordpress
+admin:admin123
+
+# ---- Joomla ----
+admin:admin
+admin:joomla
+admin:admin123
+admin:password
+
+# ---- Drupal ----
+admin:admin
+admin:password
+admin:drupal
+admin:admin123
+
+# ---- phpMyAdmin ----
+root:(空)
+root:root
+root:password
+root:admin
+admin:admin
+phpmyadmin:phpmyadmin
+
+# ---- Jenkins ----
+admin:admin
+admin:password
+admin:jenkins
+admin:admin123
+jenkins:jenkins
+
+# ---- GitLab ----
+root:5iveL!fe
+root:password
+root:admin123
+admin:admin
+
+# ---- SonarQube ----
+admin:admin
+admin:sonar
+admin:sonarqube
+
+# ---- Confluence ----
+admin:admin
+admin:confluence
+admin:password
+
+# ---- Jira ----
+admin:admin
+admin:jira
+admin:password
+
+# ---- Redmine ----
+admin:admin
+
+# ---- Nextcloud / Owncloud ----
+admin:admin
+admin:password
+admin:admin123
+
+# ---- Harbor ----
+admin:Harbor12345
+admin:admin
+
+# ---- Portainer ----
+admin:admin123
+admin:portainer
+
+# ---- Nexus ----
+admin:admin123
+admin:admin
+admin:nexus
+
+# ---- Graylog ----
+admin:admin
+admin:graylog
+
+# ---- Rocket.Chat ----
+admin:admin
+
+# ---- OA/CMS 新增 (国内厂商) ----
+admin:seeyon
+admin:landray
+admin:weaver
+sysadmin:1
+admin:tongda
+admin:yonyou
+admin:kingdee
+admin:zentao
+admin:tdOA
+admin:ecology
+admin:eoffice
+admin:panwei
+admin:wanhu
+admin:12345678
+admin:abc@123
+
+# ===========================================================================
+# 第九大类：运维/远程管理协议 (Remote Access / DevOps)
+# ===========================================================================
+
+# ---- SSH ----
+root:root
+root:admin
+root:password
+root:123456
+root:toor
+root:root123
+admin:admin
+admin:password
+admin:123456
+ubuntu:ubuntu
+centos:centos
+debian:debian
+pi:raspberry
+root:raspberry
+
+# ---- FTP ----
+ftp:ftp
+anonymous:anonymous
+admin:admin
+admin:ftp
+ftpuser:ftpuser
+user:user
+
+# ---- Telnet ----
+root:(空)
+admin:(空)
+admin:admin
+telnet:telnet
+
+# ---- RDP ----
+Administrator:(空)
+Administrator:admin
+Administrator:password
+Administrator:123456
+Administrator:Admin@123
+Administrator:P@ssw0rd
+admin:admin
+admin:password
+admin:123456
+
+# ---- VNC ----
+admin:admin
+root:root
+admin:password
+root:password
+vnc:vnc
+
+# ---- 服务协议 新增 ----
+vnc:vnc123
+vnc:password
+Administrator:Admin@12345
+Administrator:P@ssword
+Administrator:admin123
+Administrator:admin@123
+ubuntu:ubuntu123
+debian:debian123
+centos:centos123
+pi:raspberrypi
+oracle:oracle
+db2admin:db2admin123
+
+# ---- phpIPAM ----
+Admin:ipamadmin
+
+# ===========================================================================
+# 第十大类：工控设备 (ICS / SCADA)
+# ===========================================================================
+
+# ---- Siemens ----
+admin:admin
+Administrator:admin
+operator:operator
+engineer:engineer
+siemens:siemens
+admin:siemens
+
+# ---- Schneider ----
+admin:admin
+USER:USER
+administrator:admin
+Schneider:Schneider
+
+# ---- Rockwell / Allen-Bradley ----
+Administrator:(空)
+admin:admin
+administrator:password
+
+# ---- GE ----
+admin:admin
+administrator:administrator
+
+# ---- Honeywell ----
+admin:admin
+manager:manager
+operator:operator
+
+# ---- ABB ----
+admin:admin
+administrator:admin
+
+# ---- Advantech ----
+admin:admin
+root:root
+
+# ---- Moxa ----
+admin:admin
+root:root
+admin:moxa
+
+# ---- 工控/IoT 新增 ----
+apc:apc
+admin:eaton
+nsroot:nsroot
+admin:advantech
+root:moxa
+admin:moxa123
+admin:siemens123
+USER:USER
+Administrator:password
+engineer:engineer
+operator:operator123
+
+# ===========================================================================
+# 第十一大类：VMS / 视频管理平台 (Video Management Software)
+# ===========================================================================
+
+# ---- Milestone XProtect ----
+admin:password
+admin:admin
+admin:Milestone123
+sa:sa
+sa:password
+
+# ---- Genetec Security Center ----
+admin:admin
+admin:Genetec123
+admin:password
+operator:operator
+
+# ---- Exacq exacqVision ----
+admin:admin256
+user:user5710
+admin:admin
+
+# ---- DW Spectrum (Digital Watchdog) ----
+admin:admin12345
+admin:admin
+dwuser:Dw5pectrum
+admin:admin1234
+
+# ---- Avigilon ACC (Motorola) ----
+administrator:(空)
+admin:admin
+admin:password
+admin:Avigilon123
+
+# ---- Network Optix Nx Witness ----
+admin:admin
+admin:NxWitness
+
+# ---- Hanwha Wisenet SSM ----
+admin:admin
+admin:123456
+admin:Wisenet123
+
+# ---- Honeywell MAXPRO ----
+admin:trinity
+Administrator:Password1
+NVR-Admin:Password$123
+admin:admin
+
+# ---- Axxon Next ----
+admin:admin
+admin:123456
+
+# ---- Luxriot ----
+admin:admin
+
+# ===========================================================================
+# 第十二大类：门禁 / 安防集成系统 (Access Control / PSIM)
+# ===========================================================================
+
+# ---- HID VertX / Edge ----
+admin:password
+admin:(空)
+root:pass
+
+# ---- HID Origo ----
+admin:admin
+
+# ---- Lenel OnGuard ----
+SA:SA
+admin:admin
+sa:sa
+
+# ---- Honeywell WIN-PAK ----
+admin:(空)
+admin:admin
+admin:123456
+
+# ---- Honeywell Pro-Watch ----
+admin:password
+admin:admin
+
+# ---- Honeywell NetAXS ----
+admin:admin
+admin:1234
+
+# ---- Siemens SiPass ----
+admin:admin
+admin:siemens
+admin:123456
+bewa:pass
+
+# ---- Vanderbilt / ACTpro ----
+admin:admin
+admin:123456
+
+# ---- Johnson Controls P2000 ----
+admin:admin
+admin:password
+
+# ---- Gallagher Command Centre ----
+admin:admin
+admin:password
+
+# ---- Bosch BIS / AMS ----
+admin:admin
+service:service
+
+# ---- Suprema BioStar ----
+admin:admin
+admin:123456
+admin:suprema
+
+# ---- AMAG Symmetry ----
+admin:admin
+admin:password
+
+# ---- Software House C-CURE ----
+sa:sa
+sa:password
+admin:admin
+
+# ---- Vanderbilt SPC ----
+1111:1111
+01111:01111
+
+# ===========================================================================
+# 第十三大类：视频传输 / 网络基础设施 (Transmission / Infrastructure)
+# ===========================================================================
+
+# ---- Axis 视频编码器 (M70/Q74/241Q) ----
+root:pass
+root:root
+
+# ---- Bosch 视频编码器 (VIP X1600) ----
+service:service
+
+# ---- Hikvision 编码器 / 解码器 (DS-6700/DS-6400) ----
+admin:12345
+
+# ---- Dahua 编码器 / 解码器 (C series / NVD) ----
+admin:admin
+
+# ---- Vivotek 编码器 (VS series) ----
+root:(空)
+
+# ---- Pelco 编码器 (NET350) ----
+admin:admin
+
+# ---- Hikvision PoE交换机 (DS-3E series) ----
+admin:admin
+admin:12345
+
+# ---- Uniview PoE交换机 (NSW series) ----
+admin:123456
+admin:admin
+
+# ---- Tyco / DSC 报警主机 ----
+installer:installer
+admin:admin
+master:master
+user:user
+
+# ---- Bosch 报警主机 (B/G series) ----
+installer:installer
+admin:admin
+service:service
+
+# ---- Honeywell Galaxy 报警主机 ----
+manager:manager
+engineer:engineer
+user:user
+
+# ---- Paradox 报警主机 ----
+installer:installer
+admin:admin
+master:master
+
+# ---- Risco 报警主机 ----
+installer:installer
+admin:admin
+master:master
+
+# ---- Moxa 工业交换机 / 串口服务器 ----
+admin:admin
+admin:moxa
+root:root
+
+# ---- Advantech 工业交换机 (EKI series) ----
+admin:admin
+root:root
+
+# ---- TP-Link 光端机 / 交换机 (MC series) ----
+admin:admin
+
+# ---- Ubiquiti 无线网桥 (AirMax / NanoStation) ----
+ubnt:ubnt
+admin:admin
+
+# ---- Cambium 无线网桥 (ePMP / PMP) ----
+admin:admin
+
+# ---- MikroTik 无线网桥 ----
+admin:(空)
+admin:admin
+
+# ===========================================================================
+# 第十四大类：专用监控设备 (Specialty Surveillance)
+# ===========================================================================
+
+# ---- FLIR 热成像 (DNR500 / M4100 / PT AI) ----
+admin:fliradmin
+admin:000000
+admin:Flir12345678
+
+# ---- Hikvision 热成像 (DS-2TD series) ----
+admin:12345
+
+# ---- Dahua 热成像 (TPC series) ----
+admin:admin
+
+# ---- Guide Sensmart 热成像 ----
+admin:admin
+admin:123456
+
+# ---- Dali Technology 热成像 ----
+admin:admin
+admin:123456
+
+# ---- Hikvision ANPR/车牌识别 (iDS-2CD / DeepinView) ----
+admin:12345
+
+# ---- Dahua ANPR/车牌识别 (ITC/ITSE series) ----
+admin:admin
+
+# ---- Uniview ANPR/车牌识别 (UNR series) ----
+admin:123456
+
+# ---- ARH / Adaptive Recognition (车牌识别) ----
+admin:admin
+
+# ---- Hikvision PTZ键盘 (DS-1005KI) ----
+admin:12345
+
+# ---- Pelco PTZ键盘 (KBD300A / KBD5000) ----
+admin:admin
+
+# ---- Bosch PTZ键盘 (IntuiKey) ----
+service:service
+
+# ---- Hikvision 视频墙控制器 (DS-C series) ----
+admin:12345
+
+# ---- Dahua 视频墙解码器 (DSC series) ----
+admin:admin
+
+# ---- Barco 视频墙控制器 ----
+admin:admin
+
+# ---- Delta / Vivitek / Novo 视频墙控制器 ----
+admin:admin
+
+# ---- Hikvision 防爆摄像头 ----
+admin:12345
+
+# ---- Hytera 执法记录仪 (VM780 底座) ----
+admin:admin
+
+# ---- DJI Aeroscope (无人机探测) ----
+admin:admin
+
+# ---- Axis 雷达 (D series) ----
+root:pass
+
+# ===========================================================================
+# 第十五大类：SNMP Community 弱字符串
+# ===========================================================================
+
+public
+private
+snmp-public
+snmp-private
+community
+internal
+Internal
+H3C-SNMP
+h3c-snmp
+huawei-snmp
+cisco-snmp
+write
+read
+trap
+snmpd
+
+# ===========================================================================
+# 第十六大类：高频纯密码 Top 150 (无用户名，用于喷洒攻击)
+# ===========================================================================
+
+admin
+123456
+password
+12345678
+qwerty
+123456789
+12345
+1234
+111111
+1234567
+sunshine
+qwerty123
+admin123
+welcome
+666666
+abc123
+football
+123123
+1q2w3e4r
+monkey
+passw0rd
+P@ssw0rd
+Passw0rd
+master
+login
+hello
+dragon
+princess
+baseball
+trustno1
+letmein
+starwars
+summer
+iloveyou
+welcome123
+pass1234
+admin888
+admin666
+password1
+password12
+zxcvbnm
+qazwsx
+1qaz2wsx
+admin@123
+Abc@123
+Abc@1234
+Aa123456
+Admin@123
+User@123
+Test@123
+H3c@123
+H3c@2024
+H3c@2025
+H3c@2026
+Admin@2024
+Admin@2025
+Admin@2026
+ruijie@123
+zte@123
+huawei@123
+cisco@123
+sangfor@123
+changeme
+Changeme123
+p@ssw0rd
+Pa$$w0rd
+secret
+s3cret
+welcome1
+welcome01
+password01
+root123
+root@123
+toor
+system
+manager
+operator
+guest
+default
+(空)
+null
+test
+temp
+oracle
+postgres
+mysql
+sql
+database
+user
+user123
+pass
+pass123
+letmein
+shadow
+superman
+batman
+hunter
+hunter2
+qwerty1
+password@123
+Admin@1234
+P@ssword
+P@ssword1
+Qwerty@123
+Qwerty123
+Admin888
+admin123456
+admin@admin
+admin#123
+admin!@#123
+
+###############################################################################
+#  全量统计: 650+ 条弱口令记录
+#  覆盖厂商: 60+
+#  覆盖设备/软件类型: 150+
+#
+#  使用方式 (示例):
+#    hydra -C weak_passwords.txt <target> <service>
+#    medusa -C weak_passwords.txt -h <target> -M <module>
+#    ncrack -U users.txt -P passwords.txt <target>
+#    nmap --script <auth-script> --script-args userdb=users,passdb=passes <target>
+###############################################################################

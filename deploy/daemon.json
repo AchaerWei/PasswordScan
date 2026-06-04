@@ -1,0 +1,12 @@
+{
+    "registry-mirrors": [
+        "https://docker.m.daocloud.io",
+        "https://dockerhub.timeweb.cloud",
+        "https://dockerproxy.com"
+    ],
+    "log-driver": "json-file",
+    "log-opts": {
+        "max-size": "10m",
+        "max-file": "3"
+    }
+}

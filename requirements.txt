@@ -1,0 +1,33 @@
+# NetSpider-Max v3 — Weak Password Detection Tool
+# Core dependencies
+#
+# Phase 2: All database drivers promoted to mandatory to eliminate
+# hand-written protocol fallback paths (see GOLIN_INTEGRATION_AUDIT.md).
+# psycopg2-binary  — PostgreSQL (replaces hand-written SCRAM-SHA-256)
+# pymongo          — MongoDB   (replaces hand-written SCRAM-SHA-1/SHA-256)
+# oracledb         — Oracle    (replaces TNS-only detection)
+# cryptography     — MySQL RSA encryption (eliminates rsa+XOR fallback)
+
+# === Network Protocols ===
+paramiko>=3.0        # SSH
+
+# === HTTP / Web ===
+httpx>=0.24          # async HTTP client
+beautifulsoup4>=4.12 # HTML form parsing (optional, for SmartFormPlugin)
+
+# === Database Protocols (mandatory — Phase 2) ===
+psycopg2-binary>=2.9 # PostgreSQL
+pymongo>=4.0         # MongoDB
+oracledb>=2.0        # Oracle
+pymssql>=2.2         # MSSQL (optional)
+
+# === Authentication Libraries (mandatory — Phase 2) ===
+cryptography>=41.0   # MySQL caching_sha2_password RSA, general crypto
+
+# === Optional Libraries ===
+pycryptodome>=3.18   # VNC DES-ECB, NTLM crypto (optional)
+pyasn1>=0.5          # LDAP BER, SNMP (optional)
+impacket>=0.11       # SMB NTLMSSP (optional)
+
+# === External Tools ===
+# nmap >= 7.0        # Service discovery (not pip installable)

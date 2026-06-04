@@ -1,0 +1,4334 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "name": "统一资产弱口令库",
+    "desc": "单表驱动，不改代码。新增资产只需追加JSON条目。",
+    "sources": [
+      "网络资产弱口令调研表_全量.md",
+      "弱口令验证密钥库_全量.txt"
+    ],
+    "stats": {
+      "vendors": 132,
+      "total_credential_entries": 328,
+      "top100_count": 100,
+      "unauthorized_count": 7,
+      "service_types": 24
+    }
+  },
+  "service_ports": {
+    "http": [
+      80,
+      443,
+      1080,
+      3000,
+      4848,
+      5000,
+      5001,
+      5601,
+      7001,
+      7002,
+      8000,
+      8008,
+      8080,
+      8081,
+      8086,
+      8111,
+      8123,
+      8161,
+      8443,
+      8888,
+      9000,
+      9043,
+      9060,
+      9090,
+      9200,
+      9990,
+      15672,
+      18083
+    ],
+    "https": [
+      443,
+      8443,
+      5001,
+      7002,
+      9043,
+      9443
+    ],
+    "ssh": [
+      22
+    ],
+    "telnet": [
+      23
+    ],
+    "ftp": [
+      21
+    ],
+    "mysql": [
+      3306
+    ],
+    "mssql": [
+      1433
+    ],
+    "oracle": [
+      1521
+    ],
+    "postgresql": [
+      5432
+    ],
+    "redis": [
+      6379
+    ],
+    "mongodb": [
+      27017
+    ],
+    "elasticsearch": [
+      9200
+    ],
+    "rdp": [
+      3389
+    ],
+    "smb": [
+      445,
+      139
+    ],
+    "ldap": [
+      389,
+      636
+    ],
+    "winrm": [
+      5985,
+      5986
+    ],
+    "vnc": [
+      5900,
+      5901
+    ],
+    "snmp": [
+      161
+    ],
+    "rtsp": [
+      554,
+      8554
+    ],
+    "smtp": [
+      25,
+      465,
+      587
+    ],
+    "imap": [
+      143,
+      993
+    ],
+    "pop3": [
+      110,
+      995
+    ],
+    "ipmi": [
+      623
+    ]
+  },
+  "top100": [
+    {
+      "u": "admin",
+      "p": "admin"
+    },
+    {
+      "u": "root",
+      "p": "admin"
+    },
+    {
+      "u": "administrator",
+      "p": "admin"
+    },
+    {
+      "u": "user",
+      "p": "admin"
+    },
+    {
+      "u": "guest",
+      "p": "admin"
+    },
+    {
+      "u": "test",
+      "p": "admin"
+    },
+    {
+      "u": "sa",
+      "p": "admin"
+    },
+    {
+      "u": "sys",
+      "p": "admin"
+    },
+    {
+      "u": "system",
+      "p": "admin"
+    },
+    {
+      "u": "postgres",
+      "p": "admin"
+    },
+    {
+      "u": "oracle",
+      "p": "admin"
+    },
+    {
+      "u": "mysql",
+      "p": "admin"
+    },
+    {
+      "u": "ftpuser",
+      "p": "admin"
+    },
+    {
+      "u": "tomcat",
+      "p": "admin"
+    },
+    {
+      "u": "weblogic",
+      "p": "admin"
+    },
+    {
+      "u": "jenkins",
+      "p": "admin"
+    },
+    {
+      "u": "zabbix",
+      "p": "admin"
+    },
+    {
+      "u": "admin",
+      "p": "123456"
+    },
+    {
+      "u": "root",
+      "p": "123456"
+    },
+    {
+      "u": "administrator",
+      "p": "123456"
+    },
+    {
+      "u": "user",
+      "p": "123456"
+    },
+    {
+      "u": "guest",
+      "p": "123456"
+    },
+    {
+      "u": "test",
+      "p": "123456"
+    },
+    {
+      "u": "sa",
+      "p": "123456"
+    },
+    {
+      "u": "sys",
+      "p": "123456"
+    },
+    {
+      "u": "system",
+      "p": "123456"
+    },
+    {
+      "u": "postgres",
+      "p": "123456"
+    },
+    {
+      "u": "oracle",
+      "p": "123456"
+    },
+    {
+      "u": "mysql",
+      "p": "123456"
+    },
+    {
+      "u": "ftpuser",
+      "p": "123456"
+    },
+    {
+      "u": "tomcat",
+      "p": "123456"
+    },
+    {
+      "u": "weblogic",
+      "p": "123456"
+    },
+    {
+      "u": "jenkins",
+      "p": "123456"
+    },
+    {
+      "u": "zabbix",
+      "p": "123456"
+    },
+    {
+      "u": "admin",
+      "p": "password"
+    },
+    {
+      "u": "root",
+      "p": "password"
+    },
+    {
+      "u": "administrator",
+      "p": "password"
+    },
+    {
+      "u": "user",
+      "p": "password"
+    },
+    {
+      "u": "guest",
+      "p": "password"
+    },
+    {
+      "u": "test",
+      "p": "password"
+    },
+    {
+      "u": "sa",
+      "p": "password"
+    },
+    {
+      "u": "sys",
+      "p": "password"
+    },
+    {
+      "u": "system",
+      "p": "password"
+    },
+    {
+      "u": "postgres",
+      "p": "password"
+    },
+    {
+      "u": "oracle",
+      "p": "password"
+    },
+    {
+      "u": "mysql",
+      "p": "password"
+    },
+    {
+      "u": "ftpuser",
+      "p": "password"
+    },
+    {
+      "u": "tomcat",
+      "p": "password"
+    },
+    {
+      "u": "weblogic",
+      "p": "password"
+    },
+    {
+      "u": "jenkins",
+      "p": "password"
+    },
+    {
+      "u": "zabbix",
+      "p": "password"
+    },
+    {
+      "u": "admin",
+      "p": "12345678"
+    },
+    {
+      "u": "root",
+      "p": "12345678"
+    },
+    {
+      "u": "administrator",
+      "p": "12345678"
+    },
+    {
+      "u": "user",
+      "p": "12345678"
+    },
+    {
+      "u": "guest",
+      "p": "12345678"
+    },
+    {
+      "u": "test",
+      "p": "12345678"
+    },
+    {
+      "u": "sa",
+      "p": "12345678"
+    },
+    {
+      "u": "sys",
+      "p": "12345678"
+    },
+    {
+      "u": "system",
+      "p": "12345678"
+    },
+    {
+      "u": "postgres",
+      "p": "12345678"
+    },
+    {
+      "u": "oracle",
+      "p": "12345678"
+    },
+    {
+      "u": "mysql",
+      "p": "12345678"
+    },
+    {
+      "u": "ftpuser",
+      "p": "12345678"
+    },
+    {
+      "u": "tomcat",
+      "p": "12345678"
+    },
+    {
+      "u": "weblogic",
+      "p": "12345678"
+    },
+    {
+      "u": "jenkins",
+      "p": "12345678"
+    },
+    {
+      "u": "zabbix",
+      "p": "12345678"
+    },
+    {
+      "u": "admin",
+      "p": "qwerty"
+    },
+    {
+      "u": "root",
+      "p": "qwerty"
+    },
+    {
+      "u": "administrator",
+      "p": "qwerty"
+    },
+    {
+      "u": "user",
+      "p": "qwerty"
+    },
+    {
+      "u": "guest",
+      "p": "qwerty"
+    },
+    {
+      "u": "test",
+      "p": "qwerty"
+    },
+    {
+      "u": "sa",
+      "p": "qwerty"
+    },
+    {
+      "u": "sys",
+      "p": "qwerty"
+    },
+    {
+      "u": "system",
+      "p": "qwerty"
+    },
+    {
+      "u": "postgres",
+      "p": "qwerty"
+    },
+    {
+      "u": "oracle",
+      "p": "qwerty"
+    },
+    {
+      "u": "mysql",
+      "p": "qwerty"
+    },
+    {
+      "u": "ftpuser",
+      "p": "qwerty"
+    },
+    {
+      "u": "tomcat",
+      "p": "qwerty"
+    },
+    {
+      "u": "weblogic",
+      "p": "qwerty"
+    },
+    {
+      "u": "jenkins",
+      "p": "qwerty"
+    },
+    {
+      "u": "zabbix",
+      "p": "qwerty"
+    },
+    {
+      "u": "admin",
+      "p": "123456789"
+    },
+    {
+      "u": "root",
+      "p": "123456789"
+    },
+    {
+      "u": "administrator",
+      "p": "123456789"
+    },
+    {
+      "u": "user",
+      "p": "123456789"
+    },
+    {
+      "u": "guest",
+      "p": "123456789"
+    },
+    {
+      "u": "test",
+      "p": "123456789"
+    },
+    {
+      "u": "sa",
+      "p": "123456789"
+    },
+    {
+      "u": "sys",
+      "p": "123456789"
+    },
+    {
+      "u": "system",
+      "p": "123456789"
+    },
+    {
+      "u": "postgres",
+      "p": "123456789"
+    },
+    {
+      "u": "oracle",
+      "p": "123456789"
+    },
+    {
+      "u": "mysql",
+      "p": "123456789"
+    },
+    {
+      "u": "ftpuser",
+      "p": "123456789"
+    },
+    {
+      "u": "tomcat",
+      "p": "123456789"
+    },
+    {
+      "u": "weblogic",
+      "p": "123456789"
+    }
+  ],
+  "unauthorized": [
+    {
+      "service": "redis",
+      "desc": "Redis未授权访问——无密码即可执行命令",
+      "check": "发送PING命令，返回PONG即确认未授权",
+      "creds": [
+        {
+          "u": "",
+          "p": ""
+        }
+      ]
+    },
+    {
+      "service": "mongodb",
+      "desc": "MongoDB未授权访问",
+      "check": "<3.x默认关闭认证，3.x+可能未启用",
+      "creds": [
+        {
+          "u": "",
+          "p": ""
+        },
+        {
+          "u": "admin",
+          "p": ""
+        }
+      ]
+    },
+    {
+      "service": "ftp",
+      "desc": "FTP匿名登录",
+      "check": "anonymous/anonymous 或 ftp/ftp 即可登录",
+      "creds": [
+        {
+          "u": "anonymous",
+          "p": "anonymous"
+        },
+        {
+          "u": "ftp",
+          "p": "ftp"
+        }
+      ]
+    },
+    {
+      "service": "snmp",
+      "desc": "SNMP默认community字符串",
+      "check": "community=public读权限，community=private读写权限",
+      "creds": [
+        {
+          "community": "public"
+        },
+        {
+          "community": "private"
+        }
+      ]
+    },
+    {
+      "service": "elasticsearch",
+      "desc": "ES旧版无认证",
+      "check": "ES 5.x以下无内置认证，9200端口直接访问",
+      "creds": [
+        {
+          "u": "",
+          "p": ""
+        }
+      ]
+    },
+    {
+      "service": "vnc",
+      "desc": "VNC无密码",
+      "check": "RFB协议无密码认证",
+      "creds": [
+        {
+          "u": "",
+          "p": ""
+        },
+        {
+          "u": "admin",
+          "p": ""
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "category": "网络设备",
+      "subcategory": "路由器",
+      "vendor": "h3c",
+      "display": "H3C",
+      "keywords": [
+        "h3c",
+        "secpath",
+        "comware",
+        "msr",
+        "er ",
+        "sr ",
+        "cr "
+      ],
+      "models": [
+        "MSR 2600/3600/5600",
+        "MSR 810/1000",
+        "ER 3100",
+        "ER 3200",
+        "ER 3260",
+        "ER 5100/5200",
+        "SR 6600",
+        "CR 16000"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin",
+              "scope": "通用Web"
+            },
+            {
+              "u": "admin",
+              "p": "adminer3100",
+              "scope": "ER3100"
+            },
+            {
+              "u": "admin",
+              "p": "adminer3200",
+              "scope": "ER3200"
+            },
+            {
+              "u": "admin",
+              "p": "adminer3260",
+              "scope": "ER3260"
+            }
+          ]
+        },
+        "telnet": {
+          "credentials": [
+            {
+              "u": "",
+              "p": "",
+              "scope": "Console默认"
+            },
+            {
+              "u": "test",
+              "p": "123",
+              "scope": "S5120-SI隐藏"
+            }
+          ]
+        },
+        "ssh": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "",
+              "p": "",
+              "scope": "Console默认"
+            }
+          ]
+        },
+        "snmp": {
+          "credentials": [
+            {
+              "community": "public"
+            },
+            {
+              "community": "private"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "路由器",
+      "vendor": "huawei",
+      "display": "华为",
+      "keywords": [
+        "huawei",
+        "ar ",
+        "ne ",
+        "usg"
+      ],
+      "models": [
+        "AR 系列",
+        "NE 系列"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "Admin@123"
+            }
+          ]
+        },
+        "telnet": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin@huawei.com",
+              "scope": "Console"
+            }
+          ]
+        },
+        "ssh": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin@huawei.com",
+              "scope": "Console"
+            },
+            {
+              "u": "admin",
+              "p": "Admin@123"
+            }
+          ]
+        },
+        "snmp": {
+          "credentials": [
+            {
+              "community": "public"
+            },
+            {
+              "community": "private"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "路由器",
+      "vendor": "cisco",
+      "display": "思科",
+      "keywords": [
+        "cisco",
+        "ios",
+        "isr",
+        "asr"
+      ],
+      "models": [
+        "ISR 4000",
+        "ASR 1000"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "cisco",
+              "p": "cisco"
+            },
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        },
+        "telnet": {
+          "credentials": [
+            {
+              "u": "cisco",
+              "p": "cisco",
+              "scope": "Console"
+            }
+          ]
+        },
+        "ssh": {
+          "credentials": [
+            {
+              "u": "cisco",
+              "p": "cisco"
+            },
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        },
+        "snmp": {
+          "credentials": [
+            {
+              "community": "public"
+            },
+            {
+              "community": "private"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "路由器",
+      "vendor": "ruijie",
+      "display": "锐捷",
+      "keywords": [
+        "ruijie",
+        "rg-",
+        "rg-s"
+      ],
+      "models": [
+        "RS/RG-EG"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "admin",
+              "p": "ruijie"
+            }
+          ]
+        },
+        "telnet": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        },
+        "snmp": {
+          "credentials": [
+            {
+              "community": "public"
+            },
+            {
+              "community": "private"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "路由器",
+      "vendor": "zte",
+      "display": "中兴",
+      "keywords": [
+        "zte",
+        "zxr10"
+      ],
+      "models": [
+        "ZXR10"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "admin",
+              "p": "zte"
+            }
+          ]
+        },
+        "telnet": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        },
+        "snmp": {
+          "credentials": [
+            {
+              "community": "public"
+            },
+            {
+              "community": "private"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "路由器",
+      "vendor": "juniper",
+      "display": "Juniper",
+      "keywords": [
+        "juniper",
+        "netscreen",
+        "mx",
+        "ptx"
+      ],
+      "models": [
+        "MX/PTX"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "root",
+              "p": "juniper"
+            }
+          ]
+        },
+        "ssh": {
+          "credentials": [
+            {
+              "u": "root",
+              "p": ""
+            }
+          ]
+        },
+        "telnet": {
+          "credentials": [
+            {
+              "u": "root",
+              "p": ""
+            }
+          ]
+        },
+        "snmp": {
+          "credentials": [
+            {
+              "community": "public"
+            },
+            {
+              "community": "private"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "路由器",
+      "vendor": "mikrotik",
+      "display": "MikroTik",
+      "keywords": [
+        "mikrotik",
+        "routeros",
+        "rb"
+      ],
+      "models": [
+        "RB 系列"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": ""
+            }
+          ]
+        },
+        "ssh": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": ""
+            }
+          ]
+        },
+        "snmp": {
+          "credentials": [
+            {
+              "community": "public"
+            },
+            {
+              "community": "private"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "路由器",
+      "vendor": "tplink",
+      "display": "TP-Link",
+      "keywords": [
+        "tp-link",
+        "tplink",
+        "tl-er"
+      ],
+      "models": [
+        "TL-ER"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        },
+        "snmp": {
+          "credentials": [
+            {
+              "community": "public"
+            },
+            {
+              "community": "private"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "交换机",
+      "vendor": "h3c",
+      "display": "H3C",
+      "keywords": [
+        "s1850",
+        "s2600",
+        "s3100",
+        "s5120",
+        "s5130",
+        "s5500",
+        "s5560",
+        "s5820",
+        "s6800",
+        "s7500e",
+        "s9800",
+        "s12500"
+      ],
+      "models": [
+        "S1850/S2600/S3100",
+        "S5120/S5130/S5500",
+        "S5560/S5820/S6800",
+        "S7500E/S7600/S9800",
+        "S12500"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        },
+        "telnet": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "",
+              "p": "",
+              "scope": "Console"
+            }
+          ]
+        },
+        "snmp": {
+          "credentials": [
+            {
+              "community": "public"
+            },
+            {
+              "community": "private"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "交换机",
+      "vendor": "huawei",
+      "display": "华为",
+      "keywords": [
+        "s2700",
+        "s5700",
+        "s6700",
+        "s7700",
+        "s12700"
+      ],
+      "models": [
+        "S2700/S5700",
+        "S6700/S7700/S12700"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "Admin@123"
+            }
+          ]
+        },
+        "telnet": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "Admin@123"
+            },
+            {
+              "u": "admin",
+              "p": "admin@huawei.com",
+              "scope": "Console"
+            }
+          ]
+        },
+        "snmp": {
+          "credentials": [
+            {
+              "community": "public"
+            },
+            {
+              "community": "private"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "交换机",
+      "vendor": "cisco",
+      "display": "思科",
+      "keywords": [
+        "catalyst",
+        "nexus",
+        "2960",
+        "3650",
+        "9000"
+      ],
+      "models": [
+        "Catalyst 2960/3650",
+        "Nexus 9000"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "cisco",
+              "p": "cisco"
+            },
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        },
+        "telnet": {
+          "credentials": [
+            {
+              "u": "cisco",
+              "p": "cisco"
+            },
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        },
+        "snmp": {
+          "credentials": [
+            {
+              "community": "public"
+            },
+            {
+              "community": "private"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "交换机",
+      "vendor": "ruijie",
+      "display": "锐捷",
+      "keywords": [
+        "rg-s"
+      ],
+      "models": [
+        "RG-S 系列"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "admin",
+              "p": "ruijie"
+            }
+          ]
+        },
+        "telnet": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "admin",
+              "p": "ruijie"
+            }
+          ]
+        },
+        "snmp": {
+          "credentials": [
+            {
+              "community": "public"
+            },
+            {
+              "community": "private"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "交换机",
+      "vendor": "dlink",
+      "display": "D-Link",
+      "keywords": [
+        "d-link",
+        "dlink",
+        "des",
+        "dgs"
+      ],
+      "models": [
+        "DES/DGS"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        },
+        "telnet": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        },
+        "snmp": {
+          "credentials": [
+            {
+              "community": "public"
+            },
+            {
+              "community": "private"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "交换机",
+      "vendor": "netgear",
+      "display": "Netgear",
+      "keywords": [
+        "netgear",
+        "prosafe",
+        "gs",
+        "m"
+      ],
+      "models": [
+        "GS/ProSafe"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "password"
+            }
+          ]
+        },
+        "telnet": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "password"
+            }
+          ]
+        },
+        "snmp": {
+          "credentials": [
+            {
+              "community": "public"
+            },
+            {
+              "community": "private"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "无线AC/AP",
+      "vendor": "h3c",
+      "display": "H3C",
+      "keywords": [
+        "wx",
+        "wa"
+      ],
+      "models": [
+        "WX 2500/3000/3500/5500",
+        "WA 系列AP"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin",
+              "scope": "AC"
+            },
+            {
+              "u": "admin",
+              "p": "h3capadmin",
+              "scope": "AP"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "无线AC/AP",
+      "vendor": "huawei",
+      "display": "华为",
+      "keywords": [
+        "ac ",
+        "ap "
+      ],
+      "models": [
+        "AC 6005/6805",
+        "AP 胖AP"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "Admin@123",
+              "scope": "AC"
+            },
+            {
+              "u": "admin",
+              "p": "admin@huawei.com",
+              "scope": "AP"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "无线AC/AP",
+      "vendor": "aruba",
+      "display": "Aruba",
+      "keywords": [
+        "aruba",
+        "iap"
+      ],
+      "models": [
+        "7000/7200",
+        "AP 3xx/5xx(IAP)"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "无线AC/AP",
+      "vendor": "ubiquiti",
+      "display": "Ubiquiti",
+      "keywords": [
+        "unifi",
+        "ubnt"
+      ],
+      "models": [
+        "UniFi AP"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "ubnt",
+              "p": "ubnt"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "防火墙",
+      "vendor": "h3c",
+      "display": "H3C",
+      "keywords": [
+        "secpath",
+        "f1000",
+        "f1020",
+        "f1050",
+        "f1060",
+        "f5000",
+        "m9000",
+        "acg1000"
+      ],
+      "models": [
+        "SecPath F1000/F1005",
+        "F1020/F1050/F1060",
+        "F5000/M9000",
+        "ACG1000"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        },
+        "ssh": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "防火墙",
+      "vendor": "huawei",
+      "display": "华为",
+      "keywords": [
+        "usg"
+      ],
+      "models": [
+        "USG 6000/6300",
+        "USG 9500"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "Admin@123"
+            }
+          ]
+        },
+        "ssh": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "Admin@123"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "防火墙",
+      "vendor": "sangfor",
+      "display": "深信服",
+      "keywords": [
+        "sangfor",
+        "深信服",
+        "af",
+        "ssl vpn",
+        "ac "
+      ],
+      "models": [
+        "AF 下一代防火墙",
+        "SSL VPN",
+        "AC 上网行为管理"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        },
+        "ssh": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "防火墙",
+      "vendor": "hillstone",
+      "display": "山石",
+      "keywords": [
+        "hillstone",
+        "cloudedge"
+      ],
+      "models": [
+        "E/N/G 系列",
+        "CloudEdge"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "hillstone",
+              "p": "hillstone"
+            }
+          ]
+        },
+        "ssh": {
+          "credentials": [
+            {
+              "u": "hillstone",
+              "p": "hillstone"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "防火墙",
+      "vendor": "topsec",
+      "display": "天融信",
+      "keywords": [
+        "topsec",
+        "天融信",
+        "ngfw"
+      ],
+      "models": [
+        "NGFW4000"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "superman",
+              "p": "talent"
+            }
+          ]
+        },
+        "ssh": {
+          "credentials": [
+            {
+              "u": "superman",
+              "p": "talent"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "防火墙",
+      "vendor": "dptechnet",
+      "display": "迪普",
+      "keywords": [
+        "dptechnet",
+        "迪普",
+        "fw1000"
+      ],
+      "models": [
+        "FW1000"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "admin",
+              "p": "dptechnet"
+            }
+          ]
+        },
+        "ssh": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "admin",
+              "p": "dptechnet"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "防火墙",
+      "vendor": "venustech",
+      "display": "启明星辰",
+      "keywords": [
+        "venustech",
+        "venus",
+        "启明星辰"
+      ],
+      "models": [
+        "USG 系列"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "admin",
+              "p": "venus"
+            }
+          ]
+        },
+        "ssh": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "admin",
+              "p": "venus"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "防火墙",
+      "vendor": "nsfocus",
+      "display": "绿盟",
+      "keywords": [
+        "nsfocus",
+        "绿盟"
+      ],
+      "models": [
+        "NF 系列"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "admin",
+              "p": "nsfocus"
+            }
+          ]
+        },
+        "ssh": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "admin",
+              "p": "nsfocus"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "防火墙",
+      "vendor": "fortinet",
+      "display": "Fortinet",
+      "keywords": [
+        "fortinet",
+        "fortigate",
+        "forti"
+      ],
+      "models": [
+        "FortiGate"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": ""
+            }
+          ]
+        },
+        "ssh": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "网络设备",
+      "subcategory": "防火墙",
+      "vendor": "paloalto",
+      "display": "Palo Alto",
+      "keywords": [
+        "paloalto",
+        "palo alto",
+        "pan-os"
+      ],
+      "models": [
+        "PA-xxx"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        },
+        "ssh": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "hikvision",
+      "display": "海康威视",
+      "keywords": [
+        "hikvision",
+        "海康",
+        "ds-2",
+        "ds-7",
+        "ids-"
+      ],
+      "models": [
+        "IPC/NVR/DVR"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "12345",
+              "scope": "<5.3.0"
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "12345",
+              "scope": "<5.3.0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "dahua",
+      "display": "大华",
+      "keywords": [
+        "dahua",
+        "大华",
+        "dh-ipc",
+        "dh-nvr"
+      ],
+      "models": [
+        "IPC/NVR/DVR"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "888888",
+              "p": "888888",
+              "scope": "隐藏账户"
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "888888",
+              "p": "888888",
+              "scope": "隐藏账户"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "uniview",
+      "display": "宇视",
+      "keywords": [
+        "uniview",
+        "宇视"
+      ],
+      "models": [
+        "IPC/NVR"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "123456"
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "123456"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "axis",
+      "display": "Axis",
+      "keywords": [
+        "axis"
+      ],
+      "models": [
+        "IPC"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "root",
+              "p": "pass",
+              "scope": "旧型号"
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "root",
+              "p": "pass",
+              "scope": "旧型号"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "bosch",
+      "display": "Bosch",
+      "keywords": [
+        "bosch",
+        "dinion",
+        "flexidome"
+      ],
+      "models": [
+        "IPC"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "service",
+              "p": "service"
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "service",
+              "p": "service"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "samsung_hanwha",
+      "display": "Samsung/Hanwha",
+      "keywords": [
+        "samsung",
+        "hanwha",
+        "wisenet",
+        "snp-",
+        "snd-"
+      ],
+      "models": [
+        "IPC/NVR"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "1111111",
+              "scope": "旧型号"
+            },
+            {
+              "u": "admin",
+              "p": "4321",
+              "scope": "新型号"
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "1111111",
+              "scope": "旧型号"
+            },
+            {
+              "u": "admin",
+              "p": "4321",
+              "scope": "新型号"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "panasonic",
+      "display": "Panasonic",
+      "keywords": [
+        "panasonic",
+        "wv-"
+      ],
+      "models": [
+        "IPC"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "12345"
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "12345"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "sony",
+      "display": "Sony",
+      "keywords": [
+        "sony",
+        "snc-"
+      ],
+      "models": [
+        "IPC"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "foscam",
+      "display": "Foscam",
+      "keywords": [
+        "foscam"
+      ],
+      "models": [
+        "IPC"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": ""
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "honeywell",
+      "display": "Honeywell",
+      "keywords": [
+        "honeywell"
+      ],
+      "models": [
+        "IPC/NVR"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "1234"
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "1234"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "vivotek",
+      "display": "Vivotek",
+      "keywords": [
+        "vivotek"
+      ],
+      "models": [
+        "IPC"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "root",
+              "p": ""
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "root",
+              "p": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "pelco",
+      "display": "Pelco",
+      "keywords": [
+        "pelco",
+        "sarix"
+      ],
+      "models": [
+        "Sarix IPC"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "grandstream",
+      "display": "Grandstream",
+      "keywords": [
+        "grandstream",
+        "gxv"
+      ],
+      "models": [
+        "IPC"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "cp_plus",
+      "display": "CP Plus",
+      "keywords": [
+        "cp plus",
+        "cpplus"
+      ],
+      "models": [
+        "DVR/NVR"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin123"
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin123"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "tvt",
+      "display": "TVT",
+      "keywords": [
+        "tvt"
+      ],
+      "models": [
+        "IPC/NVR"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "123456"
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "123456"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "zkteco",
+      "display": "ZKTeco",
+      "keywords": [
+        "zkteco",
+        "zk"
+      ],
+      "models": [
+        "门禁/考勤"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "canon_cam",
+      "display": "Canon IPC",
+      "keywords": [
+        "canon"
+      ],
+      "models": [
+        "IPC"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "root",
+              "p": "camera"
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "root",
+              "p": "camera"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "mobotix",
+      "display": "Mobotix",
+      "keywords": [
+        "mobotix"
+      ],
+      "models": [
+        "IPC"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "meinsm"
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "meinsm"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "acti",
+      "display": "ACTi",
+      "keywords": [
+        "acti"
+      ],
+      "models": [
+        "IPC/NVR"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "Admin",
+              "p": "123456"
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "Admin",
+              "p": "123456"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "geovision",
+      "display": "GeoVision",
+      "keywords": [
+        "geovision"
+      ],
+      "models": [
+        "NVR/IPC"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "digital_watchdog",
+      "display": "Digital Watchdog",
+      "keywords": [
+        "digital watchdog",
+        "dw"
+      ],
+      "models": [
+        "NVR"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "speco",
+      "display": "Speco",
+      "keywords": [
+        "speco"
+      ],
+      "models": [
+        "NVR"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "1234"
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "1234"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "摄像头/NVR",
+      "vendor": "ubiquiti_cam",
+      "display": "Ubiquiti Protect",
+      "keywords": [
+        "unifi protect"
+      ],
+      "models": [
+        "UniFi Protect"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "ubnt",
+              "p": "ubnt"
+            }
+          ]
+        },
+        "rtsp": {
+          "credentials": [
+            {
+              "u": "ubnt",
+              "p": "ubnt"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "打印机",
+      "vendor": "hp",
+      "display": "HP",
+      "keywords": [
+        "hp",
+        "laserjet",
+        "officejet",
+        "hewlett-packard"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "admin",
+              "p": "12345678"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "打印机",
+      "vendor": "canon",
+      "display": "Canon",
+      "keywords": [
+        "canon",
+        "imagerunner"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "ADMIN",
+              "p": "canon"
+            },
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "打印机",
+      "vendor": "ricoh",
+      "display": "Ricoh",
+      "keywords": [
+        "ricoh"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "supervisor",
+              "p": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "打印机",
+      "vendor": "konica_minolta",
+      "display": "Konica Minolta",
+      "keywords": [
+        "konica",
+        "minolta",
+        "bizhub"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "admin",
+              "p": "12345678"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "打印机",
+      "vendor": "brother",
+      "display": "Brother",
+      "keywords": [
+        "brother"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "access"
+            },
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "打印机",
+      "vendor": "xerox",
+      "display": "Xerox",
+      "keywords": [
+        "xerox",
+        "workcentre"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "1111"
+            },
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "打印机",
+      "vendor": "sharp",
+      "display": "Sharp",
+      "keywords": [
+        "sharp"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "打印机",
+      "vendor": "epson",
+      "display": "Epson",
+      "keywords": [
+        "epson"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "admin",
+              "p": "epson"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "打印机",
+      "vendor": "lexmark",
+      "display": "Lexmark",
+      "keywords": [
+        "lexmark"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "打印机",
+      "vendor": "kyocera",
+      "display": "Kyocera",
+      "keywords": [
+        "kyocera",
+        "taskalfa",
+        "ecosys"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "admin",
+              "p": "admin00"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "打印机",
+      "vendor": "toshiba",
+      "display": "Toshiba",
+      "keywords": [
+        "toshiba",
+        "e-studio"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "Toshiba"
+            },
+            {
+              "u": "admin",
+              "p": "123456"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "打印机",
+      "vendor": "dell",
+      "display": "Dell",
+      "keywords": [
+        "dell"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "打印机",
+      "vendor": "oki",
+      "display": "OKI",
+      "keywords": [
+        "oki",
+        "okidata"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "admin",
+              "p": "999999"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "打印机",
+      "vendor": "fuji_xerox",
+      "display": "Fuji Xerox",
+      "keywords": [
+        "fuji",
+        "apeosport",
+        "docucentre"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "admin",
+              "p": "11111"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "打印机",
+      "vendor": "samsung_print",
+      "display": "Samsung Printer",
+      "keywords": [
+        "samsung"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "admin",
+              "p": "sec00000"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "打印机",
+      "vendor": "pantum",
+      "display": "Pantum",
+      "keywords": [
+        "pantum"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "数据库",
+      "vendor": "mysql",
+      "display": "MySQL",
+      "keywords": [
+        "mysql",
+        "mariadb"
+      ],
+      "models": [],
+      "services": {
+        "mysql": {
+          "credentials": [
+            {
+              "u": "root",
+              "p": ""
+            },
+            {
+              "u": "root",
+              "p": "root"
+            },
+            {
+              "u": "root",
+              "p": "mysql"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "数据库",
+      "vendor": "postgresql",
+      "display": "PostgreSQL",
+      "keywords": [
+        "postgresql",
+        "postgres"
+      ],
+      "models": [],
+      "services": {
+        "postgresql": {
+          "credentials": [
+            {
+              "u": "postgres",
+              "p": ""
+            },
+            {
+              "u": "postgres",
+              "p": "postgres"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "数据库",
+      "vendor": "mssql",
+      "display": "SQL Server",
+      "keywords": [
+        "mssql",
+        "sql server",
+        "ms-sql"
+      ],
+      "models": [],
+      "services": {
+        "mssql": {
+          "credentials": [
+            {
+              "u": "sa",
+              "p": ""
+            },
+            {
+              "u": "sa",
+              "p": "sa"
+            },
+            {
+              "u": "sa",
+              "p": "P@ssw0rd"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "数据库",
+      "vendor": "oracle",
+      "display": "Oracle",
+      "keywords": [
+        "oracle",
+        "tns"
+      ],
+      "models": [],
+      "services": {
+        "oracle": {
+          "credentials": [
+            {
+              "u": "SYS",
+              "p": "change_on_install"
+            },
+            {
+              "u": "SYSTEM",
+              "p": "manager"
+            },
+            {
+              "u": "SCOTT",
+              "p": "tiger"
+            },
+            {
+              "u": "DBSNMP",
+              "p": "dbsnmp"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "数据库",
+      "vendor": "mongodb",
+      "display": "MongoDB",
+      "keywords": [
+        "mongodb",
+        "mongod"
+      ],
+      "models": [],
+      "services": {
+        "mongodb": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": ""
+            },
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "admin",
+              "p": "mongodb"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "数据库",
+      "vendor": "redis",
+      "display": "Redis",
+      "keywords": [
+        "redis"
+      ],
+      "models": [],
+      "services": {
+        "redis": {
+          "credentials": [
+            {
+              "u": "",
+              "p": ""
+            },
+            {
+              "u": "",
+              "p": "redis"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "数据库",
+      "vendor": "elasticsearch",
+      "display": "Elasticsearch",
+      "keywords": [
+        "elasticsearch",
+        "elastic"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "elastic",
+              "p": "changeme"
+            },
+            {
+              "u": "elastic",
+              "p": "elastic"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "数据库",
+      "vendor": "db2",
+      "display": "DB2",
+      "keywords": [
+        "db2"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "db2inst1",
+              "p": "db2inst1"
+            },
+            {
+              "u": "db2admin",
+              "p": "db2admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "数据库",
+      "vendor": "sybase",
+      "display": "Sybase",
+      "keywords": [
+        "sybase"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "sa",
+              "p": ""
+            },
+            {
+              "u": "sa",
+              "p": "sa"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "数据库",
+      "vendor": "informix",
+      "display": "Informix",
+      "keywords": [
+        "informix"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "informix",
+              "p": "informix"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "数据库",
+      "vendor": "clickhouse",
+      "display": "ClickHouse",
+      "keywords": [
+        "clickhouse"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "default",
+              "p": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "数据库",
+      "vendor": "influxdb",
+      "display": "InfluxDB",
+      "keywords": [
+        "influxdb",
+        "influx"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "数据库",
+      "vendor": "couchdb",
+      "display": "CouchDB",
+      "keywords": [
+        "couchdb"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "admin",
+              "p": "couchdb"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "数据库",
+      "vendor": "neo4j",
+      "display": "Neo4j",
+      "keywords": [
+        "neo4j"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "neo4j",
+              "p": "neo4j"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "中间件",
+      "vendor": "tomcat",
+      "display": "Apache Tomcat",
+      "keywords": [
+        "tomcat",
+        "catalina"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "tomcat",
+              "p": "tomcat"
+            },
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "admin",
+              "p": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "中间件",
+      "vendor": "weblogic",
+      "display": "Oracle WebLogic",
+      "keywords": [
+        "weblogic"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "weblogic",
+              "p": "welcome1"
+            },
+            {
+              "u": "weblogic",
+              "p": "weblogic1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "中间件",
+      "vendor": "websphere",
+      "display": "IBM WebSphere",
+      "keywords": [
+        "websphere"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "wsadmin",
+              "p": "wsadmin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "中间件",
+      "vendor": "jboss",
+      "display": "JBoss/WildFly",
+      "keywords": [
+        "jboss",
+        "wildfly"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "中间件",
+      "vendor": "glassfish",
+      "display": "GlassFish",
+      "keywords": [
+        "glassfish"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "adminadmin",
+              "scope": "v2"
+            },
+            {
+              "u": "admin",
+              "p": "",
+              "scope": "v3/v4"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "中间件",
+      "vendor": "resin",
+      "display": "Resin",
+      "keywords": [
+        "resin",
+        "caucho"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "中间件",
+      "vendor": "jetty",
+      "display": "Jetty",
+      "keywords": [
+        "jetty"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "消息队列/搜索",
+      "vendor": "rabbitmq",
+      "display": "RabbitMQ",
+      "keywords": [
+        "rabbitmq"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "guest",
+              "p": "guest"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "消息队列/搜索",
+      "vendor": "activemq",
+      "display": "ActiveMQ",
+      "keywords": [
+        "activemq"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "消息队列/搜索",
+      "vendor": "kafka",
+      "display": "Kafka",
+      "keywords": [
+        "kafka",
+        "confluent"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin-secret"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "消息队列/搜索",
+      "vendor": "emqx",
+      "display": "EMQX",
+      "keywords": [
+        "emqx",
+        "emq"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "public"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "消息队列/搜索",
+      "vendor": "zookeeper",
+      "display": "Zookeeper",
+      "keywords": [
+        "zookeeper",
+        "zk"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "CI/CD",
+      "vendor": "jenkins",
+      "display": "Jenkins",
+      "keywords": [
+        "jenkins"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin",
+              "scope": "旧版"
+            },
+            {
+              "u": "admin",
+              "p": "",
+              "scope": "新版本地生成"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "CI/CD",
+      "vendor": "gitlab",
+      "display": "GitLab",
+      "keywords": [
+        "gitlab"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "root",
+              "p": "5iveL!fe",
+              "scope": "Omnibus旧版"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "CI/CD",
+      "vendor": "sonarqube",
+      "display": "SonarQube",
+      "keywords": [
+        "sonarqube",
+        "sonar"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "CI/CD",
+      "vendor": "nexus",
+      "display": "Nexus",
+      "keywords": [
+        "nexus",
+        "sonatype"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin123"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "CI/CD",
+      "vendor": "harbor",
+      "display": "Harbor",
+      "keywords": [
+        "harbor",
+        "goharbor"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "Harbor12345"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "CI/CD",
+      "vendor": "portainer",
+      "display": "Portainer",
+      "keywords": [
+        "portainer"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "portainer"
+            },
+            {
+              "u": "admin",
+              "p": "admin123"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "CI/CD",
+      "vendor": "teamcity",
+      "display": "TeamCity",
+      "keywords": [
+        "teamcity",
+        "jetbrains"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "CI/CD",
+      "vendor": "artifactory",
+      "display": "Artifactory",
+      "keywords": [
+        "artifactory",
+        "jfrog"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "password"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "CI/CD",
+      "vendor": "drone",
+      "display": "Drone CI",
+      "keywords": [
+        "drone",
+        "droneci"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "CI/CD",
+      "vendor": "gogs",
+      "display": "Gogs/Gitea",
+      "keywords": [
+        "gogs",
+        "gitea"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "监控/运维/虚拟化",
+      "vendor": "zabbix",
+      "display": "Zabbix",
+      "keywords": [
+        "zabbix"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "Admin",
+              "p": "zabbix"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "监控/运维/虚拟化",
+      "vendor": "nagios",
+      "display": "Nagios",
+      "keywords": [
+        "nagios"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "nagiosadmin",
+              "p": "nagiosadmin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "监控/运维/虚拟化",
+      "vendor": "grafana",
+      "display": "Grafana",
+      "keywords": [
+        "grafana"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "监控/运维/虚拟化",
+      "vendor": "splunk",
+      "display": "Splunk",
+      "keywords": [
+        "splunk"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "changeme"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "监控/运维/虚拟化",
+      "vendor": "cacti",
+      "display": "Cacti",
+      "keywords": [
+        "cacti"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "监控/运维/虚拟化",
+      "vendor": "centreon",
+      "display": "Centreon",
+      "keywords": [
+        "centreon"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "centreon"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "监控/运维/虚拟化",
+      "vendor": "phpipam",
+      "display": "phpIPAM",
+      "keywords": [
+        "phpipam"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "Admin",
+              "p": "ipamadmin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "监控/运维/虚拟化",
+      "vendor": "ansible",
+      "display": "Ansible Tower",
+      "keywords": [
+        "ansible",
+        "awx"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "password"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "监控/运维/虚拟化",
+      "vendor": "kibana",
+      "display": "Kibana",
+      "keywords": [
+        "kibana"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "elastic",
+              "p": "changeme"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "监控/运维/虚拟化",
+      "vendor": "logstash",
+      "display": "Logstash",
+      "keywords": [
+        "logstash"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "logstash",
+              "p": "logstash"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "监控/运维/虚拟化",
+      "vendor": "h3c_cas",
+      "display": "H3C CAS",
+      "keywords": [
+        "cas",
+        "h3c cas"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "Cloud@1234"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "监控/运维/虚拟化",
+      "vendor": "h3c_cloudos",
+      "display": "H3C CloudOS",
+      "keywords": [
+        "cloudos"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "Pwd@12345"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "监控/运维/虚拟化",
+      "vendor": "h3c_imc",
+      "display": "H3C iMC",
+      "keywords": [
+        "imc"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "监控/运维/虚拟化",
+      "vendor": "ucenter",
+      "display": "H3C U-Center",
+      "keywords": [
+        "u-center"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "监控/运维/虚拟化",
+      "vendor": "vmware",
+      "display": "VMware ESXi",
+      "keywords": [
+        "vmware",
+        "esxi"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "root",
+              "p": "",
+              "scope": "安装时自设"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "监控/运维/虚拟化",
+      "vendor": "vcenter",
+      "display": "vCenter",
+      "keywords": [
+        "vcenter"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "administrator@vsphere.local",
+              "p": "",
+              "scope": "安装时自设"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "监控/运维/虚拟化",
+      "vendor": "proxmox",
+      "display": "Proxmox",
+      "keywords": [
+        "proxmox"
+      ],
+      "models": [],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "root",
+              "p": "",
+              "scope": "安装时自设"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "远控卡/物理服务器",
+      "vendor": "ipmi",
+      "display": "IPMI/BMC通用",
+      "keywords": [
+        "ipmi",
+        "bmc",
+        "ilo",
+        "idrac"
+      ],
+      "models": [],
+      "services": {
+        "ipmi": {
+          "credentials": [
+            {
+              "u": "ADMIN",
+              "p": "ADMIN"
+            },
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "root",
+              "p": "root"
+            },
+            {
+              "u": "root",
+              "p": "calvin",
+              "scope": "Dell iDRAC"
+            },
+            {
+              "u": "admin",
+              "p": "password"
+            },
+            {
+              "u": "admin",
+              "p": ""
+            },
+            {
+              "u": "root",
+              "p": ""
+            },
+            {
+              "u": "admin",
+              "p": "P@ssw0rd"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "远控卡/物理服务器",
+      "vendor": "hp_ilo",
+      "display": "HP iLO",
+      "keywords": [
+        "ilo",
+        "hp ilo",
+        "proliant"
+      ],
+      "models": [
+        "iLO 2/3/4/5"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "Administrator",
+              "p": "",
+              "scope": "iLO2默认"
+            },
+            {
+              "u": "admin",
+              "p": "admin"
+            },
+            {
+              "u": "admin",
+              "p": "password"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "远控卡/物理服务器",
+      "vendor": "dell_idrac",
+      "display": "Dell iDRAC",
+      "keywords": [
+        "idrac",
+        "dell idrac"
+      ],
+      "models": [
+        "iDRAC 6/7/8/9"
+      ],
+      "services": {
+        "http": {
+          "credentials": [
+            {
+              "u": "root",
+              "p": "calvin"
+            },
+            {
+              "u": "admin",
+              "p": "admin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "办公外设",
+      "subcategory": "NAS",
+      "vendor": "synology",
+      "display": "Synology NAS",
+      "keywords": ["synology", "群晖", "diskstation", "dsm", "rackstation"],
+      "models": ["DS 全系列", "RS 全系列"],
+      "services": {
+        "http": {
+          "credentials": [
+            {"u": "admin", "p": "", "scope": "DSM6+默认无口令"},
+            {"u": "admin", "p": "synology", "scope": "旧版DSM<6"},
+            {"u": "admin", "p": "admin", "scope": "常见弱口令"},
+            {"u": "admin", "p": "123456", "scope": "常见弱口令"}
+          ]
+        },
+        "ssh": {
+          "credentials": [
+            {"u": "admin", "p": ""},
+            {"u": "admin", "p": "synology"}
+          ]
+        },
+        "smb": {
+          "credentials": [
+            {"u": "admin", "p": ""},
+            {"u": "admin", "p": "synology"},
+            {"u": "guest", "p": ""}
+          ]
+        },
+        "snmp": {
+          "credentials": [
+            {"community": "public"},
+            {"community": "private"}
+          ]
+        }
+      }
+    },
+    {
+      "category": "办公外设",
+      "subcategory": "NAS",
+      "vendor": "qnap",
+      "display": "QNAP NAS",
+      "keywords": ["qnap", "威联通", "turbo nas", "qts"],
+      "models": ["TS 全系列", "TVS 全系列"],
+      "services": {
+        "http": {
+          "credentials": [
+            {"u": "admin", "p": "admin", "scope": "默认"},
+            {"u": "admin", "p": "qnap", "scope": "旧版QTS"},
+            {"u": "admin", "p": "123456", "scope": "常见弱口令"},
+            {"u": "guest", "p": "guest"}
+          ]
+        },
+        "ssh": {
+          "credentials": [
+            {"u": "admin", "p": "admin"}
+          ]
+        },
+        "smb": {
+          "credentials": [
+            {"u": "admin", "p": "admin"},
+            {"u": "guest", "p": ""}
+          ]
+        },
+        "snmp": {
+          "credentials": [
+            {"community": "public"},
+            {"community": "private"}
+          ]
+        }
+      }
+    },
+    {
+      "category": "中间件",
+      "subcategory": "协作平台",
+      "vendor": "confluence",
+      "display": "Atlassian Confluence",
+      "keywords": ["confluence", "atlassian confluence"],
+      "models": ["Server", "Data Center"],
+      "services": {
+        "http": {
+          "credentials": [
+            {"u": "", "p": "", "scope": "首次安装向导无口令"},
+            {"u": "admin", "p": "admin"},
+            {"u": "admin", "p": "confluence"},
+            {"u": "admin", "p": "123456"}
+          ]
+        }
+      }
+    },
+    {
+      "category": "中间件",
+      "subcategory": "协作平台",
+      "vendor": "jira",
+      "display": "Atlassian Jira",
+      "keywords": ["jira", "atlassian jira"],
+      "models": ["Server", "Data Center"],
+      "services": {
+        "http": {
+          "credentials": [
+            {"u": "", "p": "", "scope": "首次安装向导无口令"},
+            {"u": "admin", "p": "admin"},
+            {"u": "admin", "p": "jira"},
+            {"u": "admin", "p": "123456"},
+            {"u": "jira", "p": "jira"}
+          ]
+        }
+      }
+    },
+    {
+    "category": "网络设备",
+    "subcategory": "安全设备",
+    "vendor": "qianxin",
+    "display": "奇安信",
+    "keywords": ["qianxin", "奇安信", "360", "secworld", "secgate", "tianqing", "tianyan", "skylar", "skynet"],
+    "models": ["天擎 EDR", "天眼 NDR/SIEM", "NGFW 防火墙 (网神 SecGate)", "SSL VPN (网神 SecSSL)", "上网行为管理 NSG"],
+    "services": {
+      "http": {
+        "credentials": [
+          {"u": "admin", "p": "admin"},
+          {"u": "admin", "p": "qianxin"},
+          {"u": "admin", "p": "qianxin123"},
+          {"u": "admin", "p": "qianxin@12345"},
+          {"u": "admin", "p": "360@admin"},
+          {"u": "admin", "p": "360admin"},
+          {"u": "admin", "p": "奇安信@123"}
+        ]
+      },
+      "ssh": {
+        "credentials": [
+          {"u": "admin", "p": "admin"},
+          {"u": "admin", "p": "qianxin@12345"}
+        ]
+      }
+    }
+  },
+  {
+    "category": "协同办公",
+    "subcategory": "企业IM",
+    "vendor": "wecom",
+    "display": "企业微信",
+    "keywords": ["wecom", "企业微信", "wework", "wechat work", "wwadmin"],
+    "models": ["私有化部署版"],
+    "services": {
+      "http": {
+        "credentials": [
+          {"u": "admin", "p": "admin"},
+          {"u": "admin", "p": "Admin@123"}
+        ]
+      }
+    }
+  },
+  {
+    "category": "协同办公",
+    "subcategory": "企业IM",
+    "vendor": "dingtalk",
+    "display": "钉钉",
+    "keywords": ["dingtalk", "钉钉", "ding", "专有钉钉"],
+    "models": ["专有钉钉私有化版"],
+    "services": {
+      "http": {
+        "credentials": [
+          {"u": "admin", "p": "admin"},
+          {"u": "admin", "p": "Ding@123"}
+        ]
+      }
+    }
+  },
+  {
+    "category": "企业应用",
+    "subcategory": "ERP",
+    "vendor": "kingdee",
+    "display": "金蝶",
+    "keywords": ["kingdee", "金蝶", "k/3", "kis", "eas", "apusic"],
+    "models": ["K/3 WISE", "KIS", "EAS"],
+    "services": {
+      "http": {
+        "credentials": [
+          {"u": "administrator", "p": ""},
+          {"u": "manager", "p": "kingdee"},
+          {"u": "admin", "p": "admin"},
+          {"u": "admin", "p": "123456"}
+        ]
+      },
+      "mssql": {
+        "credentials": [
+          {"u": "sa", "p": ""},
+          {"u": "sa", "p": "kingdee"}
+        ]
+      }
+    }
+  },
+  {
+    "category": "企业应用",
+    "subcategory": "ERP",
+    "vendor": "yonyou",
+    "display": "用友",
+    "keywords": ["yonyou", "用友", "ufida", "u8", "nc", "iuap"],
+    "models": ["U8", "NC", "NCC"],
+    "services": {
+      "http": {
+        "credentials": [
+          {"u": "admin", "p": ""},
+          {"u": "admin", "p": "admin"},
+          {"u": "system", "p": "ufida"},
+          {"u": "admin", "p": "123456"}
+        ]
+      },
+      "mssql": {
+        "credentials": [
+          {"u": "sa", "p": "sa"},
+          {"u": "sa", "p": ""}
+        ]
+      },
+      "oracle": {
+        "credentials": [
+          {"u": "nc", "p": "nc"}
+        ]
+      }
+    }
+  }
+]}

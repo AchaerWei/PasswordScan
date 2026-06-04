@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+
+# Logs
+*.log
+
+# Go build artifacts
+netspider/goproto/goproto.exe
+
+# Claude Code - local overrides
+.claude/settings.local.json
+.agents/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
